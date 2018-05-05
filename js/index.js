@@ -2,7 +2,7 @@ function additional(x){
   switch (x%4){
     case 1:
       return 3;
-    case 2:        
+    case 2:
       return 2;
     case 3:
       return 1;
@@ -14,7 +14,7 @@ function additional(x){
 $("document").ready(function(){
   document.getElementById('submit').onclick = function(){
     pagenumber = document.getElementById('pagenumber').value;
-    output="You need further "+additional(pagenumber)+" blank pages.";
+    output="You need "+additional(pagenumber)+" more blank pages at the end of your document.";
     pagenumber= Number(pagenumber) + Number(additional(pagenumber));
     times = pagenumber/4;
     counter = 0;
