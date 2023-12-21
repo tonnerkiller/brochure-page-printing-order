@@ -31,9 +31,9 @@ $("document").ready(function(){
     }
     resultstring=resultstring.slice(0,resultstring.length-1);
     //output+=resultstring;
-    $('#output').html(output);
+    document.getElementById('output').setHTML(output);
     document.getElementById('copystring').value=resultstring;
-    $('#success').html('');
+    document.getElementById('success').setHTML('');
   }
   document.getElementById('copybutton').onclick = function(){
     document.getElementById('copystring').focus();
@@ -41,9 +41,9 @@ $("document").ready(function(){
     try {
       var successful = document.execCommand('copy');
       var msg = successful ? 'successful' : 'unsuccessful';
-      $('#success').html('Copying text command was ' + msg);
+      document.getElementById('success').setHTML('Copying text command was ' + msg);
     } catch (err) {
-      $('#success').html('Oops, unable to copy');
+      document.getElementById('success').setHTML('Oops, unable to copy');
     }
   }
 });
